@@ -1,3 +1,3 @@
 import "../scss/main.scss";
 
-alert("Hello");
+import '@fortawesome/fontawesome-free/js/all';
