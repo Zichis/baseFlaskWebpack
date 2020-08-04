@@ -20,8 +20,19 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
-                    "sass-loader"
+                    "resolve-url-loader",
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    "postcss-loader"
                 ]
+            },
+            {
+                test: /\.(svg|eot|woff|woff2|ttf)$/,
+                use: ['file-loader']
             }
         ]
     }
